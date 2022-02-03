@@ -1,0 +1,152 @@
+/* IMPORT */
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700);
+
+/* ENSEMBLE DU DOCUMENTT */
+body{
+    /*font-family: Andale Mono, monospace;*/
+    /*font-family: Comic Sans MS, Comic Sans, cursive;*/
+    font-family: 'Roboto Slab', serif;
+    letter-spacing: 0.08em;
+
+    background-color: #edf1f2;
+}
+
+
+/* MENU DE NAVIGATION */
+
+/* Aide : https://www.w3schools.com/Css/css_navbar_horizontal.asp */
+
+nav.Nav_menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #e7e7e7;
+    border-radius: 12px;
+    background-color: #e4feff;
+
+    /* Effet stuck à test*/
+    position: sticky;
+    top: 0;
+}
+  
+nav.Nav_menu ul li {
+    float: left;
+    border-right: 1px solid #bbb;
+}
+  
+nav.Nav_menu ul li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+nav.Nav_menu ul li a:hover {
+    background-color: #158aff4f;
+}
+
+nav.Nav_menu ul li.stuck_right{
+    border-right: none;
+    float: right;
+}
+
+nav.Nav_menu ul li a.active_nav {
+    background-color: #158aff4f;
+}
+
+@media screen and (max-width: 900px) { /* 900px -> A REDEFINIR en fonction du texte*/
+    nav.Nav_menu ul li.stuck_right, 
+    nav.Nav_menu ul li {
+        float: none;
+        border: 1px solid #bbb;
+        border-bottom: none;
+    }
+
+    nav.Nav_menu ul li.stuck_right{
+        border-bottom: 1px solid #bbb;
+    }
+}
+
+/* BANNIERE */
+img{
+    width: 100%;
+    height: auto;
+  }
+
+/* PARTIE CONTENUE */
+
+/* Entrainement flexbox http://flexboxfroggy.com/ */ 
+.Contenu{
+    /*border : 3px solid black;*/
+    border-radius: 12px;
+    margin: 20px 8%;
+    background-color: white;
+}
+
+.Sous_partie{
+    
+    margin: 0 2%;
+    padding: 20px 0;
+}
+
+.Sous_partie h3{
+    /* Box simple color
+    display: inline-block;
+    border-radius: 4px;
+    background-color: rgb(13, 219, 255);
+    */
+
+    /* Box gradient color
+    display: inline-block;
+    border-radius: 4px;
+    background-image: linear-gradient(to bottom, rgba(77, 220, 224, 0.5), rgba(0, 17, 255, 0.5));
+    */
+
+    /* Text gradient color 
+    background-image: linear-gradient(to bottom, rgb(63, 216, 221), rgba(0, 17, 255, 0.5));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;*/
+
+    color: #1589FF;
+	text-shadow: 0 1px 1px #FFFFFF;
+	text-transform: uppercase;
+}
+
+/* DIVIDER */
+
+/*
+.divider
+{
+	position: relative;
+	height: 1px;
+}
+
+.div-transparent:before
+{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 5%;
+	right: 5%;
+	width: 90%;
+	height: 1px;
+	background-image: linear-gradient(to right, transparent, rgb(48,49,51), transparent);
+}
+*/
+
+.divider {
+    border-bottom: 1px solid #FFF;
+    background-color: #DADADA;
+    height: 1px;
+    margin: 0.5em 0px 1.5em;
+}
+
+.divider span {
+    display: block;
+    width: 50px;
+    height: 1px;
+    background-color: #1589FF;
+}
